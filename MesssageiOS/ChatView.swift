@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        return Text("Chat view")
+        NavigationView {
+           Text("chatView")
+            .navigationBarTitle("Chat View")
+        }
     }
 }
 
