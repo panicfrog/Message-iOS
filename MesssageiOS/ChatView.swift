@@ -10,9 +10,12 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        NavigationView {
-           Text("chatView")
-            .navigationBarTitle("Chat View")
+        NavigationView{
+            VStack {
+                NavigationLink(destination: ChatDetailView()) {
+                    Text("chat view")
+                }
+            }.navigationBarTitle("chat view")
         }
     }
 }
