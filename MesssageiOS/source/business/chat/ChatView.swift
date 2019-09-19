@@ -15,7 +15,7 @@ struct ChatView: View {
                 NavigationLink(destination: ChatDetailView()) {
                     Text("chat view")
                 }
-            }.navigationBarTitle("chat")
+            }.navigationBarTitle("聊天")
         }
     }
 }

@@ -9,8 +9,9 @@
 import SwiftUI
 import Combine
 
+let tokenKey = "message.yeyongping.tokenKey"
+
 final class ChatModel: ObservableObject {
-    private let tokenKey = "message.yeyongping.tokenKey"
     @Published private(set) var logined: Bool = false
     
     init() {

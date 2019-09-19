@@ -13,7 +13,7 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selection) {
             ChatView()
-                .tabItem { TabBarItemView(iconName: "message", title: "消息") }
+                .tabItem { TabBarItemView(iconName: "message.circle", title: "消息") }
                 .tag(0)
             AddressBookView()
                 .tabItem { TabBarItemView(iconName: "person.crop.square", title: "通讯录") }

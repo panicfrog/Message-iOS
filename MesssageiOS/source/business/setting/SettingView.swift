@@ -38,7 +38,7 @@ struct SettingView: View {
                         self.chatModel.deleToken()
                     }
                 }
-            }.navigationBarTitle("setting")
+            }.navigationBarTitle("设置")
         }
     }
 }

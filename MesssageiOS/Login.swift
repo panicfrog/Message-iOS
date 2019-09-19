@@ -21,7 +21,7 @@ struct LoginView: View {
                 .frame(height: 50, alignment: .center)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             Button(action: {
-                request(account: self.account, passwd: self.passwd) { (result) in
+                requestLogin(account: self.account, passwd: self.passwd) { (result) in
                     switch result {
                     case .success(let token):
                         self.chatModel.storeToken(token: token)

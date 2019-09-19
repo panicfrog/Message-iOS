@@ -31,4 +31,12 @@ struct ApiArrayResponse<T: HandyJSON>: HandyJSON {
 
 //-----------------------------------------------------------------------------
 
+struct User: HandyJSON {
+    var account: String = ""
+}
 
+struct RoomBrief: HandyJSON {
+    var room_identifier: String = ""
+    var room_name: String = ""
+    var owner: String = ""
+}

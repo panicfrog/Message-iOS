@@ -7,20 +7,29 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddressBookView: View {
-    
-    init() {
-        
-    }
-    
+    @ObservedObject var addressModel = AddressModel()
     var body: some View {
-            NavigationView{
-            VStack {
-                NavigationLink(destination: ChatDetailView()) {
-                    Text("address book view")
+        NavigationView{
+            List {
+                Section(header: Text("好友")) {
+                    ForEach(self.addressModel.friends, id: \.account) {
+                        Text("\($0.account)")
+                    }
                 }
-            }.navigationBarTitle("address book")
+                Section(header: Text("群组")) {
+                    ForEach(self.addressModel.rooms, id: \.room_identifier) {
+                        Text("\($0.room_name)")
+                            .foregroundColor(.yellow)
+                    }
+                }
+            }.listStyle(GroupedListStyle())
+                .navigationBarTitle("通讯录")
+        }.onAppear {
+            self.addressModel.queryFriends()
+            self.addressModel.queryRooms()
         }
     }
 }

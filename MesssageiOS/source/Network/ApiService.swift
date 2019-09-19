@@ -42,7 +42,7 @@ fileprivate func query(_ target: ChatApi, completion: @escaping (Result<[String:
     }
 }
 
-func request(account: String, passwd: String, completion: @escaping ((Result<String, ApiError>) -> Void)) {
+func requestLogin(account: String, passwd: String, completion: @escaping ((Result<String, ApiError>) -> Void)) {
     query(.login(account: account, passwd: passwd)) { (result) in
         switch result {
         case .success(let response):
@@ -51,6 +51,36 @@ func request(account: String, passwd: String, completion: @escaping ((Result<Str
                 return
             }
             completion(.success(res.data ?? ""))
+        case .failure(let err):
+            completion(.failure(err))
+        }
+    }
+}
+
+func requestUserFriends(completion: @escaping ((Result<[User], ApiError>) -> Void)) {
+    query(.userFriends) { result in
+        switch result {
+        case .success(let response):
+            guard let res = ApiArrayResponse<User>.deserialize(from: response) else {
+                completion(.failure(.apiDeserializeError))
+                return
+            }
+            completion(.success(res.data))
+        case .failure(let err):
+            completion(.failure(err))
+        }
+    }
+}
+
+func requestUserRooms(completion: @escaping ((Result<[RoomBrief], ApiError>) -> Void)) {
+    query(.userRooms) { result in
+        switch result {
+        case .success(let response):
+            guard let res = ApiArrayResponse<RoomBrief>.deserialize(from: response) else {
+                completion(.failure(.apiDeserializeError))
+                return
+            }
+            completion(.success(res.data))
         case .failure(let err):
             completion(.failure(err))
         }
