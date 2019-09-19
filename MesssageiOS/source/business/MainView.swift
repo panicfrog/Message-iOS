@@ -28,7 +28,8 @@ struct MainView: View {
 #if DEBUG
 struct MainView_Preview: PreviewProvider {
     static var previews: some View {
-        return MainView()
+       UITableView.appearance().separatorColor = .clear
+        return MainView().environmentObject(ChatModel())
     }
 }
 

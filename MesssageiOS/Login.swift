@@ -23,9 +23,8 @@ struct LoginView: View {
             Button(action: {
                 request(account: self.account, passwd: self.passwd) { (result) in
                     switch result {
-                    case .success(let res):
-                        print(res)
-                        self.chatModel.toggleLogined()
+                    case .success(let token):
+                        self.chatModel.storeToken(token: token)
                     case .failure(let err):
                         print(err)
                     }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SetupView: View {
     var body: some View {
-        return Text("Setup view")
+        Text("注册")
     }
 }
 

@@ -14,14 +14,13 @@ struct ContentView: View {
     var body: some View {
         Group {
             if chatModel.logined {
-                ChatView()
+                MainView()
             } else {
                 LoginView()
             }
         }
     }
 }
-
 
 
 #if DEBUG

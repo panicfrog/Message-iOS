@@ -1,5 +1,5 @@
 //
-//  SettingView.swift
+//  AddressBookView.swift
 //  MesssageiOS
 //
 //  Created by Ye Yongping on 2019/9/19.
@@ -8,22 +8,27 @@
 
 import SwiftUI
 
-struct SettingView: View {
+struct AddressBookView: View {
+    
+    init() {
+        
+    }
+    
     var body: some View {
             NavigationView{
             VStack {
                 NavigationLink(destination: ChatDetailView()) {
-                    Text("setting view")
+                    Text("address book view")
                 }
-            }.navigationBarTitle("setting")
+            }.navigationBarTitle("address book")
         }
     }
 }
 
 #if DEBUG
-struct SettingView_Preview: PreviewProvider {
+struct AddressBookView_Preview: PreviewProvider {
     static var previews: some View {
-        return SettingView()
+        return AddressBookView()
     }
 }
 
