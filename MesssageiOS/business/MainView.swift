@@ -6,8 +6,6 @@
 //  Copyright © 2019 Yeyongping. All rights reserved.
 //
 
-import Foundation
-
 import SwiftUI
 
 struct MainView: View {
@@ -15,13 +13,13 @@ struct MainView: View {
     var body: some View {
         TabView(selection: $selection) {
             ChatView()
-                .tabItem { Text("消息") }
+                .tabItem { TabBarItemView(iconName: "message", title: "消息") }
                 .tag(0)
             AddressBookView()
-                .tabItem { Text("通讯录") }
+                .tabItem { TabBarItemView(iconName: "person.crop.square", title: "通讯录") }
                 .tag(1)
             SettingView()
-                .tabItem { Text("设置") }
+                .tabItem { TabBarItemView(iconName: "gear", title: "设置")  }
                 .tag(2)
         }
     }
