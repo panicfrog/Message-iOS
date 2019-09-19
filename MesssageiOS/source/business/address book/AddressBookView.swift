@@ -15,19 +15,23 @@ struct AddressBookView: View {
         NavigationView{
             List {
                 Section(header: Text("好友")) {
-                    ForEach(self.addressModel.friends, id: \.account) {
-                        Text("\($0.account)")
+                    ForEach(self.addressModel.friends, id: \.account) { a in
+                        NavigationLink(destination: ChatDetailView()) {
+                            Text("\(a.account)")
+                        }
                     }
                 }
                 Section(header: Text("群组")) {
-                    ForEach(self.addressModel.rooms, id: \.room_identifier) {
-                        Text("\($0.room_name)")
-                            .foregroundColor(.yellow)
+                    ForEach(self.addressModel.rooms, id: \.room_identifier) { r in
+                        NavigationLink(destination: ChatDetailView()) {
+                            Text("\(r.room_name)")
+                        }
                     }
                 }
             }.listStyle(GroupedListStyle())
                 .navigationBarTitle("通讯录")
-        }.onAppear {
+            }
+        .onAppear {
             self.addressModel.queryFriends()
             self.addressModel.queryRooms()
         }

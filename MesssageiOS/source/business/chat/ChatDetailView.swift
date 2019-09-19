@@ -11,10 +11,6 @@ import SwiftUI
 struct ChatDetailView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
-        Button(action: {
-            self.presentationMode.wrappedValue.dismiss()
-        }) {
-            Text("back to chat view")
-        }
+       Text("back to presented view")
     }
 }
