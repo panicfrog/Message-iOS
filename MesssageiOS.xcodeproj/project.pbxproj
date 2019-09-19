@@ -10,6 +10,9 @@
 		6D528F9823322081003E7D6F /* ApiStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D528F9723322081003E7D6F /* ApiStatus.swift */; };
 		6D528F9A233223AA003E7D6F /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D528F99233223AA003E7D6F /* ApiModel.swift */; };
 		6D528F9C23323908003E7D6F /* ChatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D528F9B23323908003E7D6F /* ChatDetailView.swift */; };
+		6DA9417123334A56002A7064 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9417023334A56002A7064 /* MainView.swift */; };
+		6DA9417323334B13002A7064 /* AddressBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9417223334B13002A7064 /* AddressBookView.swift */; };
+		6DA9417523334B8A002A7064 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA9417423334B8A002A7064 /* SettingView.swift */; };
 		6DAF571423320ACF00CFB3CE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF571323320ACF00CFB3CE /* ChatModel.swift */; };
 		6DAF5716233211B700CFB3CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF5715233211B700CFB3CE /* ContentView.swift */; };
 		6DAF57192332168200CFB3CE /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF57182332168200CFB3CE /* Api.swift */; };
@@ -32,6 +35,9 @@
 		6D528F9723322081003E7D6F /* ApiStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStatus.swift; sourceTree = "<group>"; };
 		6D528F99233223AA003E7D6F /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		6D528F9B23323908003E7D6F /* ChatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDetailView.swift; sourceTree = "<group>"; };
+		6DA9417023334A56002A7064 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6DA9417223334B13002A7064 /* AddressBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBookView.swift; sourceTree = "<group>"; };
+		6DA9417423334B8A002A7064 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		6DAF571323320ACF00CFB3CE /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		6DAF5715233211B700CFB3CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6DAF57182332168200CFB3CE /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -64,6 +70,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6DA9417723334C3E002A7064 /* business */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9417023334A56002A7064 /* MainView.swift */,
+				6DA9417923334CB2002A7064 /* address book */,
+				6DA9417823334C6B002A7064 /* chat */,
+				6DA9417A23334CC3002A7064 /* setting */,
+			);
+			path = business;
+			sourceTree = "<group>";
+		};
+		6DA9417823334C6B002A7064 /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				6DE2696D2328E092000A07C3 /* ChatView.swift */,
+				6D528F9B23323908003E7D6F /* ChatDetailView.swift */,
+			);
+			path = chat;
+			sourceTree = "<group>";
+		};
+		6DA9417923334CB2002A7064 /* address book */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9417223334B13002A7064 /* AddressBookView.swift */,
+			);
+			path = "address book";
+			sourceTree = "<group>";
+		};
+		6DA9417A23334CC3002A7064 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				6DA9417423334B8A002A7064 /* SettingView.swift */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 		6DAF571223320A9E00CFB3CE /* ChatModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,8 +159,7 @@
 				6DE2695D2328DCB0000A07C3 /* Preview Content */,
 				6DE269692328DD30000A07C3 /* Login.swift */,
 				6DE2696B2328DE5A000A07C3 /* SetupView.swift */,
-				6DE2696D2328E092000A07C3 /* ChatView.swift */,
-				6D528F9B23323908003E7D6F /* ChatDetailView.swift */,
+				6DA9417723334C3E002A7064 /* business */,
 			);
 			path = MesssageiOS;
 			sourceTree = "<group>";
@@ -280,10 +321,13 @@
 				6DE2696C2328DE5A000A07C3 /* SetupView.swift in Sources */,
 				6DAF571D233219A700CFB3CE /* ApiService.swift in Sources */,
 				6DE2696E2328E092000A07C3 /* ChatView.swift in Sources */,
+				6DA9417523334B8A002A7064 /* SettingView.swift in Sources */,
 				6D528F9C23323908003E7D6F /* ChatDetailView.swift in Sources */,
 				6D528F9823322081003E7D6F /* ApiStatus.swift in Sources */,
 				6DE269712328E3FA000A07C3 /* Wapper.swift in Sources */,
+				6DA9417323334B13002A7064 /* AddressBookView.swift in Sources */,
 				6DAF571B2332173C00CFB3CE /* DefaultAlamofireManager.swift in Sources */,
+				6DA9417123334A56002A7064 /* MainView.swift in Sources */,
 				6DE2696A2328DD30000A07C3 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
