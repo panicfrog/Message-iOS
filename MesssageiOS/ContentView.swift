@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @EnvironmentObject var chatModel: ChatModel
+    @EnvironmentObject var chatModel: ChatViewModel
     var body: some View {
         Group {
             if chatModel.logined {
@@ -26,7 +26,7 @@ struct ContentView: View {
 #if DEBUG
 struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
-        return ContentView().environmentObject(ChatModel())
+        return ContentView().environmentObject(ChatViewModel())
     }
 }
 

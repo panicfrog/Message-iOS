@@ -11,10 +11,15 @@ import Combine
 
 let tokenKey = "message.yeyongping.tokenKey"
 
-final class ChatModel: ObservableObject {
+final class ChatViewModel: ObservableObject {
     @Published private(set) var logined: Bool = false
     
     init() {
+        // TODO - realy login token
+        if UserDefaults.standard.string(forKey: tokenKey) == .none {
+            storeToken(token: "faker token")
+        }
+        
         guard let _ = UserDefaults.standard.string(forKey: tokenKey) else {
         logined = false
             return

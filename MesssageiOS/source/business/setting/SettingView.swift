@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SettingView: View {
-    @EnvironmentObject var chatModel: ChatModel
+    @EnvironmentObject var chatModel: ChatViewModel
     var body: some View {
         NavigationView {
             VStack {
@@ -47,7 +47,7 @@ struct SettingView: View {
 struct SettingView_Preview: PreviewProvider {
     static var previews: some View {
         UITableView.appearance().separatorColor = .clear
-        return SettingView().environmentObject(ChatModel())
+        return SettingView().environmentObject(ChatViewModel())
     }
 }
 

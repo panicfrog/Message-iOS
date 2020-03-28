@@ -16,7 +16,7 @@ enum ChatApi {
 
 extension ChatApi: TargetType {
     var baseURL: URL {
-        return URL(string: "http://localhost:8080")!
+        return URL(string: "http://192.168.0.112:8080")!
     }
     
     var path: String {

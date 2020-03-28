@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct TabBarItemView: View {
     let iconName: String
@@ -16,5 +17,14 @@ struct TabBarItemView: View {
             Image(systemName: iconName)
             Text(title)
         }
+    }
+    func some() {
+        
+    }
+}
+
+struct TabBarItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

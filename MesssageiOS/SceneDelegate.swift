@@ -10,9 +10,8 @@ import UIKit
 import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -24,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             UserDefaults.standard.set(false, forKey: "logined")
-            window.rootViewController = UIHostingController(rootView: ContentView().environmentObject(ChatModel()))
+            window.rootViewController = UIHostingController(rootView: ContentView().environmentObject(ChatViewModel()))
             self.window = window
             window.makeKeyAndVisible()
         }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var chatModel: ChatModel
+    @EnvironmentObject var chatModel: ChatViewModel
     @State var account: String  = ""
     @State var passwd: String  = ""
     var body: some View {
@@ -43,7 +43,7 @@ struct LoginView: View {
 #if DEBUG
 struct Login_Previews : PreviewProvider {
     static var previews: some View {
-        LoginView().environmentObject(ChatModel())
+        LoginView().environmentObject(ChatViewModel())
     }
 }
 #endif
